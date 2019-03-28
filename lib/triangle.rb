@@ -23,6 +23,5 @@ class Triangle
   end 
   
   class TriangleError < StandardError
-    puts "This is not a triangle."
   end 
 end
