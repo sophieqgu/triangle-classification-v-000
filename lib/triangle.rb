@@ -1,15 +1,14 @@
 class Triangle
   attr_accessor :side_1, :side_2, :side_3
   def initialize(side_1, side_2, side_3)
-    @sides = []
     @side_1 = side_1
     @side_2 = side_2
     @side_3 = side_3
-    @sides.push(@side_1, @side_2, @side_3)
+    @sides = [@side_1, @side_2, @side_3].sort 
   end 
   
   def kind 
-    if @sides.sort[0] + @sides.sort[1] > @sides.sort[2] && @sides.none?{|s| s <= 0}
+    if @sides[0] + @sides[1] > @sides[2] && @sides.none?{|s| s <= 0}
       if @side_1 == @side_2 && @side_2 == @side_3
         :equilateral 
       elsif @side_1 == @side_2 || @side_2 == @side_3 || @side_1 == @side_3 
