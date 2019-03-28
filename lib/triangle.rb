@@ -9,9 +9,9 @@ class Triangle
   
   def kind 
     if @sides[0] + @sides[1] > @sides[2] && @sides.none?{|s| s <= 0}
-      if @side_1 == @side_2 && @side_2 == @side_3
+      if @sides[0] == @sides[1] && @sides[1] == @sides[2]
         :equilateral 
-      elsif @side_1 == @side_2 || @side_2 == @side_3 || @side_1 == @side_3 
+      elsif @sides[0] == @sides[1] || @sides[1] == @sides[2] 
         :isosceles
       else 
         :scalene 
